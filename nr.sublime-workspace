@@ -1,0 +1,542 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"chk",
+				"chk_browser"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"tes",
+				"text-transform"
+			],
+			[
+				"robo",
+				"roboto-medium"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"colo",
+				"color"
+			],
+			[
+				"kommune",
+				"edit-field-kommunetesttax"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Searching 301 files for \"steder\"\n\nC:\\project\\try\\nr\\sites\\all\\themes\\cua\\panels\\layouts\\cua_redigerprofil\\cua-redigerprofil.tpl.php:\n   55                      <?php if(isset($approved_lokations) && count($approved_lokations)>0) {?>\n   56                      <div class=\"approved_lokations_div\">\n   57:                     <h3><strong>GODKJENTE STEDER</strong></h3>\n   58                      <ul class=\"approved_lokations_ul\">\n   59  <?php\n\n1 match in 1 file\n\n\nSearching 5494 files for \"steder\"\n\nC:\\project\\try\\nr\\sites\\all\\themes\\cua\\panels\\layouts\\cua_redigerprofil\\cua-redigerprofil.tpl.php:\n   55                      <?php if(isset($approved_lokations) && count($approved_lokations)>0) {?>\n   56                      <div class=\"approved_lokations_div\">\n   57:                     <h3><strong>GODKJENTE BRUKERSTEDER</strong></h3>\n   58                      <ul class=\"approved_lokations_ul\">\n   59  <?php\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 931,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+			"settings":
+			{
+				"buffer_size": 6468,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"p",
+				"Package Control: Enable Package"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 66.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/project/try/nr",
+		"/C/project/try/nr/sites",
+		"/C/project/try/nr/sites/all",
+		"/C/project/try/nr/sites/all/themes",
+		"/C/project/try/nr/sites/all/themes/cua"
+	],
+	"file_history":
+	[
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_opretcykel/cua-opretcykel.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_opretlokation/cua-opretlokation.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_ture/cua-ture.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_oprettur/cua-oprettur.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_visture/cua-visture.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_viscykel/cua-viscykel.tpl.php",
+		"/C/project/try/nr/profiles/minimal/translations/drupal-7.37.sv.po",
+		"/C/project/try/nr/sites/all/themes/cua/style.css",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_personer/cua-personer.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/templates/html.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+		"/C/project/try/nr/sites/all/themes/cua/panels/layouts/cua_forside/cua-forside.tpl.php",
+		"/C/project/try/nr/sites/default/settings.php",
+		"/C/project/try/norway/sites/default/settings.php",
+		"/C/project/try/svc/sites/all/modules/unlimitedfield_remove/unlimitedfield_remove.module",
+		"/C/project/try/svc/sites/default/settings.php",
+		"/C/project/try/svc/sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php",
+		"/C/project/try/svc/sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php",
+		"/C/project/try/svc/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php",
+		"/C/project/try/svc/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php",
+		"/C/project/try/cycle/sites/all/themes/chkfile.php",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/page.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_forside/cua-forside.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/page--masterreport.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/style.css",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+		"/C/project/try/cycle/sites/all/modules/views/includes/ajax.inc",
+		"/C/project/try/cycle/sites/all/modules/views/views.module",
+		"/C/project/try/cycle/sites/all/modules/cyklingudenalder/cyklingudenalder.module",
+		"/C/project/try/cycle/sites/all/modules/go_report/go_report.module",
+		"/C/project/try/cycle/sites/all/modules/go_report/go_report.js",
+		"/C/project/try/cycle/sites/all/modules/go_report/go_report.info",
+		"/C/project/try/cycle/sites/all/modules/rules/modules/system.eval.inc",
+		"/C/project/try/cycle/sites/all/modules/rules/modules/system.rules.inc",
+		"/C/project/try/cycle/ck.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/cua-oprettur.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+		"/C/project/try/cycle/modules/user/user.module",
+		"/C/project/try/cycle/sites/all/cua-selokation2.tpl.php",
+		"/C/project/try/cycle/sites/all/modules/views/modules/node/views_plugin_argument_default_node.inc",
+		"/C/Users/pm/Documents/cua-selokation2.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/views-view-fields--1-top-box.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/cua.info",
+		"/C/project/try/cycle/sites/all/themes/cua/js/customscript.js",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/html.tpl.php",
+		"/C/Users/pm/Downloads/sexy-social-buttons/css/social.css",
+		"/C/project/try/cycle/sites/all/themes/cua/social.css",
+		"/C/project/try/cycle/misc/farbtastic/farbtastic.css",
+		"/C/Users/pm/Downloads/sexy-social-buttons/index.html",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/pm/Downloads/sexy-social-buttons/js/social.js",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php",
+		"/C/Users/pm/Documents/cycle/issue_fixes",
+		"/C/project/try/cycle/sites/all/themes/cua/template.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_editconfirmtur/cua-editconfirmtur.tpl.php",
+		"/C/project/try/cycle/html2/lokationer_sub.html",
+		"/C/project/try/cycle/html/lokationer_sub.html",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all/modules/ethicon_institute/ethicon_institute.info",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/includes/database.mysql-common.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/includes/database.pgsql.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all/modules/views/plugins/views_plugin_query_default.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all - Copy/modules/views/plugins/views_plugin_query_default.inc"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			"C:\\project\\try\\nr\\",
+			"C:\\project\\try\\nr\\sites\\all\\themes\\cua",
+			"<current file>",
+			"C:\\project\\try\\nr\\sites\\all\\themes\\cua",
+			"<current file>",
+			"C:\\project\\try\\nr",
+			"C:\\project\\try\\svc",
+			"C:\\project\\try\\cycle",
+			"C:\\project\\try\\cycle\\sites\\all\\themes\\cua",
+			"C:\\project\\try\\cycle\\sites\\all\\modules\\views",
+			"C:\\project\\try\\cycle\\sites\\all\\modules\\rules",
+			"C:\\project\\try\\cycle",
+			"<open folders>,C:\\project\\try\\cycle\\sites\\all\\themes\\cua",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"steder",
+			"opret_tur_right",
+			"når turen er godkendt af koordinatoren på lokationen",
+			"-da-",
+			"sweden",
+			"ret",
+			"Gem kommentar",
+			"PASSAGERARE",
+			"LÅDCYKELPILOT",
+			"http://sweden",
+			"sweden",
+			"This is a one-time login",
+			"Position är vakant",
+			"breadcrumbs",
+			"fjern",
+			"PRAKTISK INFO",
+			"PLATS",
+			"SE PÅ KARTA",
+			"plats",
+			"Logga Ut",
+			"Jag önskar att inte få meddelanden",
+			"BEKRÄFTAD",
+			"MEDDELANDEN",
+			"UPPRÄTTA MIG",
+			"Lösenord",
+			"Lösenor",
+			"Lösenord",
+			"html2",
+			"form_row1",
+			"podio",
+			"sæt et",
+			"sätta ett",
+			"kommun inte med på listan",
+			"page-width",
+			"unlimitedfield_remove_button",
+			"drupal_cua",
+			"panel-separator",
+			"ressourcer_left",
+			"\nVælg en eller flere favoritlokationer herunder ved at trykke på den grå stjerne, som herefter bliver gul",
+			"HJEM",
+			"logo",
+			"BESKEDER",
+			"LOKATIONER",
+			"TURE",
+			"hjem",
+			"Vi drømmer om en verden, hvor vi gennem aktivt medborgerskab skaber livsglæde hos vores ældre medborgere og giver dem mulighed for at forblive en aktiv del af fællesskabet og nærmiljøet. Dermed bygger vi bro mellem generationer og forstærker tilliden, respekten og den sociale lim i vores samfund",
+			"Har du også lyst",
+			"views/ajax",
+			"exit",
+			"send mail",
+			"send email",
+			"edit-submit4",
+			"$pass_reset",
+			"pass_reset",
+			"pass-reset-token",
+			"Drupal.settings.basePath",
+			"cycle",
+			"+",
+			"$uname",
+			"thumb_box",
+			"OPLÆRING",
+			"IL OPLÆRING",
+			"PILOTER TIL OPLÆRING",
+			"#footer",
+			"background-color",
+			"footer_box",
+			"footer_box a",
+			"footer",
+			"edit-field-kommunetesttax-und",
+			"edit-field-testlokation-und",
+			"kommune",
+			"adresse",
+			"ADRESSE",
+			"copy",
+			",\n",
+			"  $items['mediatype_filters'] = array(\n      'page callback' => 'mediatype_filters',\n      'access callback' => TRUE,\n      'type' => MENU_CALLBACK,\n  );\n",
+			"mediatype_filters",
+			"media"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"-nn-",
+			"SKJUL KOMMENTAR",
+			"PASSASJER",
+			"RICKSHAWPILOT",
+			"http://norwaydev",
+			"norwaydev"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 931,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										346,
+										352
+									],
+									[
+										816,
+										822
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 2,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 231.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6468,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2004,
+								2004
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 864.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "nr.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

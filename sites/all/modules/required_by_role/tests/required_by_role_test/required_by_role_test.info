@@ -1,0 +1,12 @@
+name = Required by role test
+description = Module for testing purposes
+
+core = 7.x
+dependencies[] = required_by_role
+
+; Information added by Drupal.org packaging script on 2014-02-26
+version = "7.x-1.3+5-dev"
+core = "7.x"
+project = "required_by_role"
+datestamp = "1393455816"
+

@@ -1,0 +1,22 @@
+name = cua
+description = Cykling uden alder
+package = Core
+version = VERSION
+core = 7.x
+stylesheets[all][] = style.css
+stylesheets[all][] = responsive-nav.css
+
+; SCRIPTS
+scripts[] = js/responsive-nav.js
+
+
+; REGIONS
+regions[menu] 	   				= Menu
+regions[login] 	   				= Login
+regions[banner] 	   				= Banner
+regions[content] 	   			= Content
+
+
+
+; PLUGINS
+plugins[panels][layouts] = 'panels/layouts'

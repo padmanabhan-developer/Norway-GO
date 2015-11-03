@@ -1,0 +1,190 @@
+diff --git a/facebook_rules.info b/facebook_rules.info
+index 059064d..2e22972 100644
+--- a/facebook_rules.info
++++ b/facebook_rules.info
+@@ -1,12 +1,9 @@
+ name = Facebook Rules
+ description = Rules integration for fboauth module.
+ core = 7.x
+-files[] = facebook_rules.module
+-files[] = facebook_rules.install
+-files[] = facebook_rules.rules.inc
+ dependencies[] = fboauth
+ dependencies[] = rules
+-dependencies[] = pdm
++
+ ; Information added by Drupal.org packaging script on 2013-12-17
+ version = "7.x-1.4+10-dev"
+ core = "7.x"
+diff --git a/facebook_rules.module b/facebook_rules.module
+index 45c2d8e..4d66f38 100755
+--- a/facebook_rules.module
++++ b/facebook_rules.module
+@@ -129,13 +129,13 @@ function facebook_rules_fboauth_actions() {
+ 
+ /**
+  * Post message on user's wall.
+- * 
++ *
+  * This function can be reused to post different $data on facebook wall.
+- * 
++ *
+  * Triggers facebook_rules_post_to_my_wall_sucess on success.
+  * Logs data to watchdog on failure and displays a persistent message
+  * to the user at which wall should have been posted
+- * 
++ *
+  * @see drupal_http_request()
+  * @return object
+  *   object from drupal_http_request
+@@ -159,38 +159,53 @@ function facebook_rules($url, $data, $user) {
+           '!link' => l(t('Click here'), $token_url),
+         )
+       );
+-      $options = array(
+-        'type' => 'warning',
+-        'pdm_type' => 'facebook_rules',
+-        'repeat' => TRUE,
+-        'persist' => TRUE,
+-        'uid' => $user->uid,
+-      );
+-      pdm_create_message($message, $options);
++      if (module_exists('pdm')) {
++        $options = array(
++          'type' => 'warning',
++          'pdm_type' => 'facebook_rules',
++          'repeat' => TRUE,
++          'persist' => TRUE,
++          'uid' => $user->uid,
++        );
++        pdm_create_message($message, $options);
++      }
++      else {
++        drupal_set_message($message, 'warning');
++      }
+     }
+     // If there is possibility of duplicate status message.
+     elseif ($content['error']['code'] == '506') {
+       $message = t('This status was posted recently on your facebook wall. Duplicate message suspected.');
+-      $options = array(
+-        'type' => 'warning',
+-        'pdm_type' => 'facebook_rules',
+-        'repeat' => TRUE,
+-        'uid' => $user->uid,
+-      );
+-      pdm_create_message($message, $options);
++      if (module_exists('pdm')) {
++        $options = array(
++          'type' => 'warning',
++          'pdm_type' => 'facebook_rules',
++          'repeat' => TRUE,
++          'uid' => $user->uid,
++        );
++        pdm_create_message($message, $options);
++      }
++      else {
++        drupal_set_message($message, 'warning');
++      }
+     }
+     // Facebook allows a maximum number of status updates in a day.
+     // In case the limit is reached, show a warning.
+     elseif ($content['error']['code'] == '341') {
+       $message = t('Facebook feed action request limit reached. Your updates would no longer be posted on your Facebook wall today.');
+-      $options = array(
+-        'type' => 'warning',
+-        'pdm_type' => 'facebook_rules',
+-        'repeat' => FALSE,
+-        'persist' => TRUE,
+-        'uid' => $user->uid,
+-      );
+-      pdm_create_message($message, $options);
++      if (module_exists('pdm')) {
++        $options = array(
++          'type' => 'warning',
++          'pdm_type' => 'facebook_rules',
++          'repeat' => FALSE,
++          'persist' => TRUE,
++          'uid' => $user->uid,
++        );
++        pdm_create_message($message, $options);
++      }
++      else {
++        drupal_set_message($message, 'warning');
++      }
+     }
+     elseif ((!facebook_rules_get_token($user->uid) && fboauth_fbid_load($user->uid))|| $content['error']['code'] == '2500') {
+       $link = fboauth_action_link_properties('facebook_rules_generate_token');
+@@ -201,14 +216,19 @@ function facebook_rules($url, $data, $user) {
+           '!link' => l(t('Click here'), $token_url),
+         )
+       );
+-      $options = array(
+-        'type' => 'warning',
+-        'pdm_type' => 'facebook_rules',
+-        'repeat' => TRUE,
+-        'persist' => TRUE,
+-        'uid' => $user->uid,
+-      );
+-      pdm_create_message($message, $options);
++      if (module_exists('pdm')) {
++        $options = array(
++          'type' => 'warning',
++          'pdm_type' => 'facebook_rules',
++          'repeat' => TRUE,
++          'persist' => TRUE,
++          'uid' => $user->uid,
++        );
++        pdm_create_message($message, $options);
++      }
++      else {
++        drupal_set_message($message, 'warning');
++      }
+     }
+     // Authentication Error occured when attempting to send to Facebook.
+     elseif ($content['error']['type'] == 'OAuthException') {
+@@ -217,14 +237,19 @@ function facebook_rules($url, $data, $user) {
+     // For all other errors.
+     else {
+       $message = t('Something went wrong while posting update to your facebook wall. The error has been captured.');
+-      $options = array(
+-        'type' => 'warning',
+-        'pdm_type' => 'facebook_rules',
+-        'repeat' => FALSE,
+-        'persist' => TRUE,
+-        'uid' => $user->uid,
+-      );
+-      pdm_create_message($message, $options);
++      if (module_exists('pdm')) {
++        $options = array(
++          'type' => 'warning',
++          'pdm_type' => 'facebook_rules',
++          'repeat' => FALSE,
++          'persist' => TRUE,
++          'uid' => $user->uid,
++        );
++        pdm_create_message($message, $options);
++      }
++      else {
++        drupal_set_message($message, 'warning');
++      }
+     }
+ 
+     // Log error message to watchdog.
+@@ -273,7 +298,7 @@ function facebook_rules_log($response, $user, $message = '', $variables = array(
+ 
+ /**
+  * Facebook OAuth callback for initiating a Facebook connection.
+- * 
++ *
+  * Borrowed from fboauth.module: Overridden.
+  */
+ function facebook_rules_fboauth_action_connect($app_id, $access_token) {
+@@ -357,7 +382,7 @@ function facebook_rules_fboauth_action_connect($app_id, $access_token) {
+ 
+ /**
+  * Facebook OAuth callback for deauthorizing a Facebook connection.
+- * 
++ *
+  * Borrowed from fboauth.module: Overridden.
+  */
+ function facebook_rules_fboauth_action_deauth($app_id, $access_token) {

@@ -1,0 +1,19 @@
+name = Required by role
+description = Provides checkboxes for each field to set the required property for that field per role.
+core = 7.x
+
+files[] = required_by_role.date.inc
+
+;Tests
+files[] = tests/RequiredByRoleBasic.test
+files[] = tests/RequiredByRoleCallbackAlterTestCase.test
+files[] = tests/RequiredByRoleDateFieldWebTestCase.test
+files[] = tests/RequiredByRoleEmailFieldWebTestCase.test
+files[] = tests/RequiredByRoleImageFieldWebTestCase.test
+
+; Information added by Drupal.org packaging script on 2014-02-26
+version = "7.x-1.3+5-dev"
+core = "7.x"
+project = "required_by_role"
+datestamp = "1393455816"
+

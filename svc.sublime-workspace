@@ -1,0 +1,585 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"$ano",
+				"$anodee"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"onl",
+				"onclick	Attr"
+			],
+			[
+				"exe",
+				"execute"
+			],
+			[
+				"$",
+				"$ready	jQuery ready function"
+			],
+			[
+				"app",
+				"approved_uid"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"strip",
+				"strip_tags"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"paddin",
+				"padding-top"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"chk",
+				"chk_browser"
+			],
+			[
+				"hei",
+				"height"
+			],
+			[
+				"tes",
+				"text-transform"
+			],
+			[
+				"robo",
+				"roboto-medium"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"colo",
+				"color"
+			],
+			[
+				"kommune",
+				"edit-field-kommunetesttax"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+			"settings":
+			{
+				"buffer_size": 7297,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Padmanabhan/.ssh/padmanabhangit.pub",
+			"settings":
+			{
+				"buffer_size": 408,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"p",
+				"Package Control: Enable Package"
+			],
+			[
+				"pi",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 703.0
+	},
+	"console":
+	{
+		"height": 66.0,
+		"history":
+		[
+			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			" import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/project/swedencycle",
+		"/E/project/swedencycle/sites",
+		"/E/project/swedencycle/sites/all",
+		"/E/project/swedencycle/sites/all/themes",
+		"/E/project/swedencycle/sites/all/themes/cua",
+		"/E/project/swedencycle/sites/all/themes/cua/panels",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_selokation2"
+	],
+	"file_history":
+	[
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_ture/cua-ture.tpl.php",
+		"/E/project/swedencycle/sites/all/modules/calendar/theme/calendar-mini.tpl.php",
+		"/E/project/swedencycle/sites/all/modules/date/date_views/theme/date-views-pager.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_oprettur/cua-oprettur.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+		"/E/project/swedencycle/sites/default/settings.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_opretcykel/cua-opretcykel.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/style.css",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_tilmeld/cua-tilmeld.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/templates/html.tpl.php",
+		"/E/project/swedencycle/sites/all/modules/cyklingudenalder/cyklingudenalder.module",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_personer/cua-personer.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_opretlokation/cua-opretlokation.tpl.php",
+		"/E/project/swedencycle/html2/opret_cykel.html",
+		"/E/project/swedencycle/html/am_bekraeft_tur.html",
+		"/E/project/swedencycle/html/beskeder.html",
+		"/E/project/swedencycle/html/beskeder_trad.html",
+		"/E/project/swedencycle/html/frivillig_view.html",
+		"/E/project/swedencycle/html/log_ind.html",
+		"/E/project/swedencycle/html/lokationer.html",
+		"/E/project/swedencycle/html/lokationer_sub.html",
+		"/E/project/swedencycle/html/opret_cykel.html",
+		"/E/project/swedencycle/html/opret_tur.html",
+		"/E/project/swedencycle/html/personer_opret.html",
+		"/E/project/swedencycle/html/rediger_profil.html",
+		"/E/project/swedencycle/html/ressourcer.html",
+		"/E/project/swedencycle/html2/am_bekraeft_tur.html",
+		"/E/project/swedencycle/html2/beskeder.html",
+		"/E/project/swedencycle/html2/beskeder_trad.html",
+		"/E/project/swedencycle/html2/frivillig_view.html",
+		"/E/project/swedencycle/html2/log_ind.html",
+		"/E/project/swedencycle/html2/lokationer.html",
+		"/E/project/swedencycle/html2/lokationer_sub.html",
+		"/E/project/swedencycle/html2/opret_tur.html",
+		"/E/project/swedencycle/html2/personer_opret.html",
+		"/E/project/swedencycle/html2/rediger_profil.html",
+		"/E/project/swedencycle/html2/ressourcer.html",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_beskeder/cua-beskeder.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_tidligereture/cua-tidligereture.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_visture/cua-visture.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_forsideam/cua-forsideam.tpl.php",
+		"/E/project/swedencycle/sites/all/themes/cua/panels/layouts/cua_opretkorttur/cua-opretkorttur.tpl.php",
+		"/C/Users/Padmanabhan/AppData/Local/Temp/template.php",
+		"/C/Users/Padmanabhan/Downloads/dk/test.php",
+		"/C/Users/Padmanabhan/Downloads/sw/test.php",
+		"/E/project/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php",
+		"/E/project/cycle/sites/all/modules/cyklingudenalder/jun_27_cyklingudenalder.module",
+		"/E/project/cycle/sites/all/modules/cyklingudenalder/cyklingudenalder.module",
+		"/E/project/cycle/sites/all/themes/cua/templates/privatemsg-view.tpl.php",
+		"/E/project/cycle/sites/all/themes/cua/style.css",
+		"/E/project/cycle/sites/all/themes/cua/templates/page.tpl.php",
+		"/E/project/cycle/sites/all/themes/cua/panels/layouts/cua_redigerprofil/cua-redigerprofil.tpl.php",
+		"/E/project/cycle/sites/all/themes/cua/js/cua-go.js",
+		"/E/project/cycle/sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+		"/E/project/cycle/sites/all/themes/cua/templates/html.tpl.php",
+		"/C/Users/Padmanabhan/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/E/project/cycle/sites/all/themes/cua/js/customscript.js",
+		"/E/project/cycle/sites/all/themes/cua/cua.info",
+		"/E/project/cycle/sites/all/themes/cua/js/cua_go.js",
+		"/E/project/style.css",
+		"/E/project/cycle/modules/user/user.module",
+		"/C/project/try/cycle/sites/all/cua-selokation2.tpl.php",
+		"/C/project/try/cycle/sites/all/modules/views/modules/node/views_plugin_argument_default_node.inc",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/page.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/style.css",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+		"/C/Users/pm/Documents/cua-selokation2.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/views-view-fields--1-top-box.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/cua.info",
+		"/C/project/try/cycle/sites/all/themes/cua/js/customscript.js",
+		"/C/project/try/cycle/sites/all/themes/cua/templates/html.tpl.php",
+		"/C/Users/pm/Downloads/sexy-social-buttons/css/social.css",
+		"/C/project/try/cycle/sites/all/themes/cua/social.css",
+		"/C/project/try/cycle/misc/farbtastic/farbtastic.css",
+		"/C/Users/pm/Downloads/sexy-social-buttons/index.html",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/pm/Downloads/sexy-social-buttons/js/social.js",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/cua-oprettur.tpl.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php",
+		"/C/Users/pm/Documents/cycle/issue_fixes",
+		"/C/project/try/cycle/sites/all/themes/cua/template.php",
+		"/C/project/try/cycle/sites/all/themes/cua/panels/layouts/cua_editconfirmtur/cua-editconfirmtur.tpl.php",
+		"/C/project/try/cycle/html2/lokationer_sub.html",
+		"/C/project/try/cycle/html/lokationer_sub.html",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all/modules/ethicon_institute/ethicon_institute.info",
+		"/C/Users/pm/AppData/Roaming/Sublime Text 3/Packages/User/HTML.sublime-settings",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/includes/database.mysql-common.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/includes/database.pgsql.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all/modules/views/plugins/views_plugin_query_default.inc",
+		"/C/project/SVNcopy/CE/EntAcq/branches/SIT_Version1/docroot/sites/all - Copy/modules/views/plugins/views_plugin_query_default.inc"
+	],
+	"find":
+	{
+		"height": 49.0
+	},
+	"find_in_files":
+	{
+		"height": 159.0,
+		"where_history":
+		[
+			"E:\\project\\swedencycle\\sites\\all\\modules\\calendar,E:\\project\\swedencycle\\sites\\all\\modules\\date",
+			"E:\\project\\swedencycle",
+			"<current file>",
+			"E:\\project\\swedencycle\\sites",
+			"E:\\project\\swedencycle\\sites\\all\\themes\\cua\\panels\\layouts",
+			"<current file>",
+			"E:\\project\\swedencycle",
+			"<current file>",
+			"",
+			"E:\\project\\swedencycle",
+			"E:\\project\\cycle",
+			"C:\\project\\try\\cycle",
+			"<open folders>,C:\\project\\try\\cycle\\sites\\all\\themes\\cua",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"date-heading",
+			"week",
+			"week ",
+			"$num",
+			"No options are available for the current form values",
+			"sw_",
+			"plats",
+			"print_r",
+			"echo",
+			"print_r",
+			"exit",
+			"text",
+			"allowDrop3",
+			"http",
+			"lokarr",
+			"edit-field-testlokation-und",
+			"999",
+			"test.php",
+			"hertur3",
+			"hertur1",
+			"edit-field-testlokation-und",
+			"test.php",
+			"http://cycle",
+			"http://sweden.gobooking.bike",
+			".php",
+			"test.php",
+			"test",
+			"ajax",
+			"reload",
+			"edit-field-testlokation-und",
+			"BILLEDE",
+			"Stilling er ledig",
+			"tilme",
+			"starterfrivillig",
+			"AF DINE ÆLDRE NABOER",
+			"cron",
+			"error",
+			"Du er nu godkendt som pilot på",
+			" Du er nu godkendt som pilot på",
+			" Du er nu godkendt som pilot på ",
+			"Vælg",
+			"edit_field_tur_beboer_und__2_chosen",
+			"Passager",
+			"PASSAGERARE",
+			"BESKEDER",
+			"BESKEDER (",
+			"Rickshaw-pilot",
+			"DIT FORSLAG",
+			"FREMTIDIGE",
+			"RICKSHAWPILOT",
+			"BEKRÆFTET TUR",
+			"Vi drømmer om en verden, hvor vi gennem aktivt medborgerskab",
+			"drupal_cua",
+			"click",
+			"unflag",
+			"flag/unflag",
+			"flag/unflag/",
+			"remove",
+			"$pass_reset",
+			"pass_reset",
+			"pass-reset-token",
+			"Drupal.settings.basePath",
+			"cycle",
+			"+",
+			"$uname",
+			"thumb_box",
+			"OPLÆRING",
+			"IL OPLÆRING",
+			"PILOTER TIL OPLÆRING",
+			"#footer",
+			"background-color",
+			"footer_box",
+			"footer_box a",
+			"footer",
+			"edit-field-kommunetesttax-und",
+			"edit-field-testlokation-und",
+			"kommune",
+			"adresse",
+			"ADRESSE",
+			"copy",
+			",\n",
+			"  $items['mediatype_filters'] = array(\n      'page callback' => 'mediatype_filters',\n      'access callback' => TRUE,\n      'type' => MENU_CALLBACK,\n  );\n",
+			"mediatype_filters",
+			"media"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"http://svc",
+			"http://cycle",
+			"Välj",
+			"MEDDELANDEN"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "sites/all/themes/cua/panels/layouts/cua_selokation2/cua-selokation2.tpl.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 7297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2481,
+								2481
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1860.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/Padmanabhan/.ssh/padmanabhangit.pub",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "svc.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 409.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

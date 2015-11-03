@@ -1,0 +1,29 @@
+aagade7@gmail.com
+Angelo@parente.dk
+
+tovholder
+agn@viborg.dk
+gison@naestved.dk
+
+
+kaptajn
+aksel.sonne@gmail.com
+
+Service desk 3:
+pilot/kaptajn
+verdenventer@gmail.com
+
+
+Drupal User passwords:
+Username / pwd : kbh@cyklingudenalder.dk / practice_890
+
+admin
+vs@createassociates.com
+practi_se123
+
+cycle1@cycle.com
+cyclecap@cycle.com
+cyclecoord@cycle.com
+
+
+draggable="true" ondragstart="drag(event)"

@@ -1,0 +1,152 @@
+<?php
+function cyklingudenalder_mail($key,&$message,$params){
+	switch ($key) {
+		case 'send_email':
+	    $message['subject']=t($params['subject']);
+	    $message['body'][0]=$params['body'];
+	    $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+			break;
+  }
+}
+
+/**
+* Implementation of hook_hook_info().
+*/
+function cyklingudenalder_menu() {
+  $items['cyklingudenalder/activationemails'] = array(
+	  'title' => 'Send Activation emails',
+	  'page callback' => 'drupal_get_form',
+	  'page arguments' => array('cykling_activation_form'),
+	  'access callback' => array('check_cyklingudenalder_admin'),
+	  'type' => MENU_NORMAL_ITEM,
+	);
+  $items['cyklingudenalder/untagpilot'] = array(
+	  'title' => 'Remove pilot from location',
+	  'page callback' => 'cyklingudenalder_untag_pilot',
+	  'access callback' => TRUE,
+	  'type' => MENU_CALLBACK,
+	);
+	return $items;
+}
+
+function cyklingudenalder_untag_pilot(){
+	global $user;
+	$location_id = filter_xss(arg(2));
+	$pilot_id = filter_xss(arg(3));
+	$query_removepilot = db_delete('field_data_field_godkendte_piloter')
+  	->condition('entity_id', $location_id)
+  	->condition('field_godkendte_piloter_uid', $pilot_id)
+  	->execute();
+	$query_removepilot = db_delete('field_revision_field_godkendte_piloter')
+		->condition('entity_id', $location_id)
+		->condition('field_godkendte_piloter_uid', $pilot_id)
+		->execute();
+	$query_removepilot = db_delete('field_data_field_kaptajn')
+		->condition('entity_id', $location_id)
+		->condition('field_kaptajn_uid', $pilot_id)
+		->execute();
+	$query_removepilot = db_delete('field_revision_field_kaptajn')
+		->condition('entity_id', $location_id)
+		->condition('field_kaptajn_uid', $pilot_id)
+		->execute();
+  $flagg = flag_get_flag('lokation');
+  $action = 'unflag';
+  $flagg->flag($action, $location_id);
+  $truncate_field_cache = db_truncate('cache_field')->execute();
+  echo "success";
+}
+
+function cykling_activation_form($form, &$form_state){
+	$form = array();
+	$form['to_emails'] = array(
+		'#type' => 'textarea','#title' => 'Enter the recepient E-mails',
+	);
+	$form['email_subject'] = array(
+		'#type' => 'textfield','#title' => 'Email Subject',
+	);
+	$form['email_body'] = array(
+		'#type' => 'textarea','#title' => 'Email Body',
+	);
+	$form['send_email_submit'] = array(
+		'#type' => 'submit','#value' => 'Send Email',
+	);
+	return $form;
+}
+
+function cykling_activation_form_submit($form, &$form_state){
+	$to_list = explode(';',$form_state['values']['to_emails']);
+	$headers = "MIME-Version: 1.0" . "\r\n";
+	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+	$headers .= 'From: <hej@cyklingudenalder.dk>' . "\r\n";
+	$subject = $form_state['values']['email_subject'];
+	$email_message = $form_state['values']['email_body'];
+	if(count($to_list) > 0){
+		foreach($to_list as $to_id){
+			$recepient = user_load_by_mail($to_id);
+			$activation_link = user_pass_reset_url($recepient);
+			$email_message_single = str_replace('!activation_link', $activation_link, $email_message);
+			$email_message_single = str_replace('!fname', $recepient->field_fornavn['und'][0]['value'], $email_message_single);
+			$email_message_single = str_replace('!user_email', $recepient->mail, $email_message_single);
+
+			$params = array('body' => $email_message_single, 'subject' => $subject, 'headers'=> $headers);
+			drupal_mail('cyklingudenalder', 'send_email', $to_id, language_default(), $params, 'hej@cyklingudenalder.dk', TRUE);
+		}
+	}
+}
+
+function check_cyklingudenalder_admin(){
+	global $user;
+	if($user->uid && $user->uid == 1){
+		return TRUE;
+	}
+	else{
+		return FALSE;
+	}
+}
+
+function pp($str){
+	echo '<pre>';
+	print_r($str);
+	echo '</pre>';
+}
+
+function ppe($str){
+	echo '<pre>';
+	print_r($str);
+	echo '</pre>';
+	exit;
+}
+
+function build_email_text($text){
+$activation_email_text = <<<EMAILBODY
+"<p>Hej !fname ,</p>
+
+<p>Tak fordi du vil være med i Cykling uden alder!</p>
+
+<p>Du kan logge ind nu ved at klikke på linket herunder, eller ved at copy/paste det ind i din browser:</p>
+!activation_link
+<p>Ovenstående link kan kun bruges én gang, og vil lede dig hen til en side hvor du kan vælge det password du ønsker.</p>
+
+<p>Efter du har valgt et password, vil du kunne logge ind på http://loop.cyklingudenalder.dk ved at bruge:</p>
+
+<p>Dit brugernavn:  !user_email</p>
+
+<p>God fornøjelse!</p>"
+EMAILBODY;
+
+}
+
+function cyklingudenalder_node_presave($node){
+//	ppe($node);
+}
+
+function cyklingudenalder_form_alter(&$form, &$form_state, $form_id){
+  if($form_id == 'user_profile_form')
+  {
+    $form['#submit'][] = 'cycklingudenalder_profile_form_submit';
+  }
+}
+
+function cycklingudenalder_profile_form_submit($form, &$form_state){
+ $form_state['redirect'] = 'lokationer';
+}

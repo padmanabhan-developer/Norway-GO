@@ -1,0 +1,16 @@
+--- facebook_rules.info
++++ facebook_rules.info
+@@ -1,12 +1,9 @@
+ name = Facebook Rules
+ description = Rules integration for fboauth module.
+ core = 7.x
+-files[] = facebook_rules.module
+-files[] = facebook_rules.install
+-files[] = facebook_rules.rules.inc
+ dependencies[] = fboauth
+ dependencies[] = rules
+-dependencies[] = pdm
++
+ ; Information added by Drupal.org packaging script on 2013-12-17
+ version = "7.x-1.4+10-dev"
+ core = "7.x"
