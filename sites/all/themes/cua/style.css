@@ -932,7 +932,10 @@ border-radius: 1px; color:#6b6b6b; font-size:13px; font-family: 'RobotoLight'; m
 border-radius: 1px; color:#6b6b6b; font-size:14px; font-family: 'RobotoLight'; resize:none; padding:10px 10px; }
 .button24{float:right; width:170px; height:48px; text-align:center; line-height:48px; background:#489e5c; border:none; margin:0; padding:0; color:#fff; font-size:17px;text-transform:uppercase;}
 .button24:hover{background:#54c76f;}
-
+.button24_comment{
+    /*float:right; */
+    width:195px; height:48px; text-align:center; line-height:48px; background:#489e5c; border:none; margin:0; padding:0; color:#fff; font-size:17px;text-transform:uppercase;}
+.button24_comment:hover{background:#54c76f;}
 
 .opret_tur_right{float:right; width:440px; margin:0 20px 0 0;}
 .opret_tur_right h2 {

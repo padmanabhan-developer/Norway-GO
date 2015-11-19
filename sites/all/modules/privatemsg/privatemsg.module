@@ -1218,12 +1218,12 @@ function privatemsg_user_view($account) {
   if (($url = privatemsg_get_link(array($account))) && variable_get('privatemsg_display_profile_links', 1)) {
     $account->content['privatemsg_send_new_message'] = array(
       '#type'   => 'link',
-      '#title'  => t('Send this user a private message'),
+      '#title'  => t('send melding'),
       '#href'  => $url,
       '#weight' => 10,
       '#options' => array(
         'query' => drupal_get_destination(),
-        'title' => t('Send this user a private message'),
+        'title' => t('send melding'),
         'attributes' => array('class' => 'privatemsg-send-link privatemsg-send-link-profile'),
       ),
     );

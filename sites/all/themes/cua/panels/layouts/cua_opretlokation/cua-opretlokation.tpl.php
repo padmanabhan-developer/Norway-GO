@@ -96,11 +96,11 @@
      $('#edit-field-kaptajn').appendTo('#hertur1');
     $('#edit-field-godkendte-piloter').appendTo('#hertur1');
 
-     $('#edit-body-nn-0-value').appendTo('#hertur4');
-     $("#edit-body-nn-0-value").removeClass('form-textarea');
-     $("#edit-body-nn-0-value").removeClass('text-full');
-     $("#edit-body-nn-0-value").addClass('textarea7');
-     $("#edit-body-nn-0-value").attr("placeholder", "Praktisk info");
+     $('#edit-body-nb-0-value').appendTo('#hertur4');
+     $("#edit-body-nb-0-value").removeClass('form-textarea');
+     $("#edit-body-nb-0-value").removeClass('text-full');
+     $("#edit-body-nb-0-value").addClass('textarea7');
+     $("#edit-body-nb-0-value").attr("placeholder", "Praktisk info");
 
      $('#edit-body-und-0-value').appendTo('#hertur4');
      $("#edit-body-und-0-value").removeClass('form-textarea');

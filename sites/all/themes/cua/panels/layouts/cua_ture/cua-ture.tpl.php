@@ -8,7 +8,7 @@
 
                     <div class="am_ture_left">
                     	 <div class="am_ture_left_top">
-                         	 <!-- <a href="#" class="button27">FILTER <img src="images/arrow2.png" alt=""></a>--><h3>FUTURE <strong>TURER</strong></h3>
+                         	 <!-- <a href="#" class="button27">FILTER <img src="images/arrow2.png" alt=""></a>--><h3>FREMTID <strong>TURER</strong></h3>
                          </div><!--close am_ture_left_top-->
 
                          <div class="box_area2">

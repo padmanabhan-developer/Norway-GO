@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -172,5 +171,3 @@ if (isset($remove_id) && ($remove_id!='')) {
 </script>
 <?
 }
-?>
-

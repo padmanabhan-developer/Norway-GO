@@ -141,12 +141,12 @@ $("[id^=edit-comment-body-und-0-value--]").removeClass('required');
     $("[id^=edit-comment-body-und-0-value--]").addClass('textarea1');
     $("[id^=edit-comment-body-und-0-value--]").attr("placeholder", "SKRIV KOMMENTAR...");
      $("[id^=edit-submit--]").removeClass('form-submit');
-     $("[id^=edit-submit--]").addClass('button24');
-     $("[id^=edit-submit--]").val('SKJUL KOMMENTAR');
+     $("[id^=edit-submit--]").addClass('button24_comment');
+     $("[id^=edit-submit--]").val('LEGG TIL KOMMENTAR');
 
       $("#edit-submit").removeClass('form-submit');
-     $("#edit-submit").addClass('button24');
-     $("#edit-submit").val('SKJUL KOMMENTAR');
+     $("#edit-submit").addClass('button24_comment');
+     $("#edit-submit").val('LEGG TIL KOMMENTAR');
     //
     //edit-comment-body-und-0-value--2
     // edit-submit
