@@ -935,7 +935,11 @@ border-radius: 1px; color:#6b6b6b; font-size:14px; font-family: 'RobotoLight'; r
 .button24_comment{
     /*float:right; */
     width:195px; height:48px; text-align:center; line-height:48px; background:#489e5c; border:none; margin:0; padding:0; color:#fff; font-size:17px;text-transform:uppercase;}
-.button24_comment:hover{background:#54c76f;}
+/*.button24_comment:hover{background:#54c76f;}*/
+.button24_comment_disabled{
+    background-color: rgb(131, 131, 131);
+}
+
 
 .opret_tur_right{float:right; width:440px; margin:0 20px 0 0;}
 .opret_tur_right h2 {

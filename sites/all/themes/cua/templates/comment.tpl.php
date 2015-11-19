@@ -58,26 +58,32 @@
  *
  * @ingroup themeable
  */
+
 ?>
 
 
-
 <div class="box7">
-                              	   <div class="box7_top">
-                                   		<span class="thumb6"><?php print $picture; ?></span>
-                                        <h4> <?php print $changed; ?></h4>
-                                    <h5><?php print $author; ?></h5>
-                                   </div>
-                                   <?php if ($new): ?>
-    
-  <?php endif; ?>
-                                  <?php
-      // We hide the comments and links now so that we can render them later.
-      hide($content['links']);
-      print render($content);
-    ?>
+  <div class="box7_top">
+      <span class="thumb6">
+        <?php print $picture; ?>
+      </span>
+      <h4>
+        <?php print $changed; ?>
+      </h4>
+      <h5>
+        <?php print $author; ?>
+      </h5>
+  </div>
+  <?php if ($new): ?>
 
-<span class="new"><?php print $new ?></span>
-<?php print render($content['links']) ?>
-                              </div><!--close box7-->
+  <?php endif; ?>
+  <?php
+  // We hide the comments and links now so that we can render them later.
+  hide($content['links']);
+  print render($content);
+  ?>
+
+  <span class="new"><?php print $new ?></span>
+  <?php print render($content['links']) ?>
+</div><!--close box7-->
 

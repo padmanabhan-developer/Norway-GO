@@ -147,10 +147,25 @@ $("[id^=edit-comment-body-und-0-value--]").removeClass('required');
       $("#edit-submit").removeClass('form-submit');
      $("#edit-submit").addClass('button24_comment');
      $("#edit-submit").val('LEGG TIL KOMMENTAR');
+
+     $(".button24_comment").attr("disabled","disabled");
+     $(".button24_comment").addClass('button24_comment_disabled');
+
     //
     //edit-comment-body-und-0-value--2
     // edit-submit
-    //
+    //comment_body[und][0][value]
+    $("[name*='comment_body[und][0][value]']").keyup(function(){
+      // alert($("#edit-comment-body-und-0-value").val());
+    // $("#edit-comment-body-und-0-value").change(function(){
+      if($(this).val() != '') {
+        $(".button24_comment").attr("disabled","");
+        $(".button24_comment").removeClass('button24_comment_disabled');
+      } else {
+        $(".button24_comment").attr("disabled","disabled");
+        $(".button24_comment").addClass('button24_comment_disabled');
+      }
+    });
 
 
     })(jQuery);
