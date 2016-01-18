@@ -34,19 +34,19 @@ function cyklingudenalder_untag_pilot(){
 	$location_id = filter_xss(arg(2));
 	$pilot_id = filter_xss(arg(3));
 
-	$query_removepilot = db_delete('nw_field_data_field_godkendte_piloter')
+	$query_removepilot = db_delete('nr_field_data_field_godkendte_piloter')
   	->condition('entity_id', $location_id)
   	->condition('field_godkendte_piloter_uid', $pilot_id)
   	->execute();
-	$query_removepilot = db_delete('nw_field_revision_field_godkendte_piloter')
+	$query_removepilot = db_delete('nr_field_revision_field_godkendte_piloter')
 		->condition('entity_id', $location_id)
 		->condition('field_godkendte_piloter_uid', $pilot_id)
 		->execute();
-	$query_removepilot = db_delete('nw_field_data_field_kaptajn')
+	$query_removepilot = db_delete('nr_field_data_field_kaptajn')
 		->condition('entity_id', $location_id)
 		->condition('field_kaptajn_uid', $pilot_id)
 		->execute();
-	$query_removepilot = db_delete('nw_field_revision_field_kaptajn')
+	$query_removepilot = db_delete('nr_field_revision_field_kaptajn')
 		->condition('entity_id', $location_id)
 		->condition('field_kaptajn_uid', $pilot_id)
 		->execute();
@@ -54,7 +54,7 @@ function cyklingudenalder_untag_pilot(){
   $flagg = flag_get_flag('lokation');
   $action = 'unflag';
   $flagg->flag($action, $location_id);
-  $truncate_field_cache = db_truncate('nw_cache_field')->execute();
+  $truncate_field_cache = db_truncate('nr_cache_field')->execute();
   echo "success";
 }
 
