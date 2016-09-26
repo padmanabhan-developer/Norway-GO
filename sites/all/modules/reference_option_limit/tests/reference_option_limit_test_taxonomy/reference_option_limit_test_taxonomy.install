@@ -140,12 +140,9 @@ function reference_option_limit_test_taxonomy_install() {
   );
   field_create_instance($instance);
 
-  // Get our definition of cities and countries.
-  $cities = reference_option_limit_test_taxonomy_cities();
-
   // Create country terms.
   $country_tids = array();
-  foreach (array_unique($cities) as $country_name) {
+  foreach (array('Britain', 'France', 'Italy') as $country_name) {
     $term = (object) array(
       'vid' => $vocabularies['countries']->vid,
       'name' => $country_name,
@@ -155,6 +152,7 @@ function reference_option_limit_test_taxonomy_install() {
   }
 
   // Create city terms.
+  $cities = reference_option_limit_test_taxonomy_cities();
   foreach ($cities as $city_name => $country_name) {
     $term = (object) array(
       'vid' => $vocabularies['cities']->vid,
@@ -175,9 +173,6 @@ function reference_option_limit_test_taxonomy_install() {
 
 /**
  * Implements hook_uninstall().
- *
- * This is not necessary for tests, but it makes development of tests easier by
- * allowing use of Devel module's reinstall tool to obtain a clean slate.
  */
 function reference_option_limit_test_taxonomy_uninstall() {
   // Delete fields.

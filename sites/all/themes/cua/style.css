@@ -1,6 +1,82 @@
 /*
 CUA
 */
+.button_div{
+border: 1px solid #666;
+float: right;
+margin-bottom: 3px;
+font-size: 12px;
+padding: 2px;
+background-color: #666;
+font-weight: bold;
+color: #FFF;
+cursor: pointer;
+}
+.untag_popup{
+background-color: rgb(51, 51, 51);
+position: fixed;
+top: 0%;
+bottom: 0%;
+left: 0%;
+right: 0%;
+opacity: 0.7;
+}
+
+.untag_popup_msg{
+position: fixed;
+top: 30%;
+left: 25%;
+background-color: #FFF;
+padding: 5%;
+opacity: 1 !important;
+color: #000;
+font-weight: bold;
+font-size: 20px;
+text-align: center;
+width: 40%;
+}
+
+.untag_popup_msg button {
+margin-top: 10%;
+top: 30%;
+position: relative;
+margin-right: 10%;
+margin-left: 10%;
+width: 20%;
+padding: 1%;
+}
+
+.untag_user{
+float: left;
+width: 170px;
+background-color: #666;
+padding: 0.5%;
+text-align: center;
+color:#FFF;
+cursor: pointer;
+display: none;
+font-weight: bold;
+font-size: 14px;
+}
+.location_title_node{
+    float:left;
+    width: 60%;
+}
+
+.approved_lokations_li_div button{
+float: right;
+}
+.approved_lokations_ul{
+line-height: 2;
+}
+
+.approved_lokations_li_div a{
+    color: #444;
+}
+
+.approved_lokations_li_div a:hover{
+    color: #A00;
+}
 
 #multi-day-container {
 display:none;
@@ -37,7 +113,7 @@ font-size:24px;
 }
 
 
-/* MEDDELANDEN */
+/* BESKEDER */
 
 
 .privatemsg-message-participants a {
@@ -474,6 +550,8 @@ margin: auto;
     /*padding:35px 0 55px 0;*/
     margin:2rem 0 0 0;
     padding: 2%;
+/*    position: absolute;
+    bottom: 0px;*/
 }
 
 
@@ -551,8 +629,8 @@ margin: auto;
 .nav{float:left; margin:0; padding:0; clear:both; width:100%;font-family: 'RobotoLight';}
 .nav li{position:relative; font-size:15px; text-transform:uppercase; color:#505050; margin:0 0 0 20px; float:left;}
 .nav li a{color:#505050; text-decoration:none; display:block; padding:0; -webkit-transition:none;
-	-moz-transition:none;
-	transition:none;  line-height:44px;}
+    -moz-transition:none;
+    transition:none;  line-height:44px;}
 .nav a:hover {color:#000; text-decoration:none; display:block; background:url(/sites/all/themes/cua/images/nav_ho.png) repeat-x left bottom; }
 .nav .active a, .nav .current-menu-item a, .nav > li:hover > a {color:#000; text-decoration:none; display:block;}
 .nav ul li:hover a, .nav li:hover li a {background:none; }
@@ -581,7 +659,6 @@ html[xmlns] .nav {display: block;}
 
 .am_bekraeft_tur{width:490px; margin:auto;}
 .breadcrumbs{float:left; margin:0 0 15px -115px; }
-.breadcrumbs_new{float:left; margin:0 0 15px 0; }
 .breadcrumbs ul{margin:0; padding:0;}
 .breadcrumbs ul li{float:left; background:url(/sites/all/themes/cua/images/arrow.png) no-repeat 0 center; padding:0 0 0 15px; color:#606060; font-size:18px; text-transform:uppercase;font-family: 'RobotoLight'; }
 .breadcrumbs ul li a{color:#606060;}
@@ -932,13 +1009,6 @@ border-radius: 1px; color:#6b6b6b; font-size:13px; font-family: 'RobotoLight'; m
 border-radius: 1px; color:#6b6b6b; font-size:14px; font-family: 'RobotoLight'; resize:none; padding:10px 10px; }
 .button24{float:right; width:170px; height:48px; text-align:center; line-height:48px; background:#489e5c; border:none; margin:0; padding:0; color:#fff; font-size:17px;text-transform:uppercase;}
 .button24:hover{background:#54c76f;}
-.button24_comment{
-    /*float:right; */
-    width:195px; height:48px; text-align:center; line-height:48px; background:#489e5c; border:none; margin:0; padding:0; color:#fff; font-size:17px;text-transform:uppercase;}
-/*.button24_comment:hover{background:#54c76f;}*/
-.button24_comment_disabled{
-    background-color: rgb(131, 131, 131);
-}
 
 
 .opret_tur_right{float:right; width:440px; margin:0 20px 0 0;}
@@ -3320,7 +3390,4 @@ display: none;
 .ppl_image p{
     color: #575757;
     font-family: robotomedium;
-}
-.fb_loginbutton{
-width : 257px !important;
 }

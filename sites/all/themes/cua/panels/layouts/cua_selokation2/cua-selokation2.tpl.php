@@ -87,14 +87,14 @@ EOD;
 
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= 'From: <hej@cyklingudenalder.dk>' . "\r\n";
+$headers .= 'From: <hej@syklingutenalder.no>' . "\r\n";
 
 $to = $email;
 $subject = $mail_subject;
 $txt = $mail_body;
 $params = array('body' => $txt, 'subject' => $subject, 'headers'=> $headers);
 if(isset($to) && ($to != '')){
-drupal_mail('cyklingudenalder', 'send_email', $to, language_default(), $params, 'hej@cyklingudenalder.dk', TRUE);
+drupal_mail('cyklingudenalder', 'send_email', $to, language_default(), $params, 'hej@syklingutenalder.no', TRUE);
 }
 
 

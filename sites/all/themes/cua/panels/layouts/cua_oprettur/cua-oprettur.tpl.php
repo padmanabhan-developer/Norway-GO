@@ -1,16 +1,18 @@
 <?php
-$node = menu_get_object();
-/*echo '<pre>';
-print_r($node);exit;*/
-$author = $node->uid;
-$confirmed_by_coord = $node->field_tur_confirmed['und'][0]['value'];
-$passanger = $node->field_tur_beboer['und'];
-$accepted_by_pilot = $node->field_bekr_ftet_af_frivillig['und'][0]['value'];
-$show_buttons_to_pilot = FALSE;
+$edit_op = (arg(2) == "edit"?1:0);
+$nid = (int)arg(1);
+global $user;
 
-if($confirmed_by_coord && $accepted_by_pilot && ($user->uid==$author) && (count($passanger)>0)){
-$show_buttons_to_pilot = TRUE;
+if ($edit_op && ( in_array('frivillig', $user->roles) || in_array('aktivitetsmedarbejder', $user->roles) ) && $nid > 0) {
+   $node_info = node_load($nid);
+   if (in_array('aktivitetsmedarbejder', $user->roles)) {
+        $allow_all_op = 1;
+   }
+   if ($user->uid == $node_info->uid) { // check author
+     $allow_only_edit_datetime = 1;
+   }
 }
+
 ?>
 <div class="opret_tur">
                   <div class="opret_tur_left">
@@ -296,15 +298,15 @@ if($("#edit-field-tur-dato-und-0-value2-datepicker-popup-0").val() != $("#edit-f
 $("#edit-submit4").attr('disabled','disabled');
 $("#edit-submit4").css("background-color","#838383");
  foo2();
- $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random() , function(data) {
+ $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random() , function(data) {
  $("#syvtid").html(data);
 
  });
-$.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&rnd=" + Math.random() , function(data) {
+$.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&rnd=" + Math.random() , function(data) {
  $("#syvtid").html(data);
  });
 
- $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+ $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
      });
 
@@ -351,7 +353,7 @@ bookoktjek = $("li.search-choice").size();
 $("#edit-submit4").attr('disabled','disabled');
 $("#edit-submit4").css("background-color","#838383");
 $("#kanikkebookes").css("display","block");
- $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
+ $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid2").html(data);
  });
 }
@@ -404,7 +406,7 @@ $("#edit-field-testlokation-und").css("border-color","#929292");
  $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").css("border-color","#FFF000");
 $("#edit-submit4").attr('disabled','disabled');
  $("#edit-submit4").css("background-color","#838383");
-     $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
+     $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test2.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid2").html(data);
  });
  }
@@ -468,7 +470,7 @@ submitButton1.disabled=true;
 $("#edit-submit4").attr('disabled','disabled');
           $("#edit-submit4").css("background-color","#838383");
       //  alert('Prøv igen senere');
-    $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
+    $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test3.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&t1=" + $("#edit-field-tur-dato-und-0-value-timepicker-popup-1").val() + "&t2=" + $("#edit-field-tur-dato-und-0-value2-timepicker-popup-1").val() + "&rnd=" + Math.random(), function(data) {
 // $("#syvtid2").html(data);
 
  if (data.indexOf("OK") !=-1)  {
@@ -480,7 +482,7 @@ $("#edit-submit4").attr('disabled','disabled');
         }
         else
         {
-         $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+         $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
      });
 
@@ -495,14 +497,14 @@ $("#edit-submit4").attr('disabled','disabled');
     });
 
 
- $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+ $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
  });
 
 
       $("#edit-field-testlokation-und").keyup(function(){
 
-     $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+     $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
  });
 
@@ -510,12 +512,12 @@ $("#edit-submit4").attr('disabled','disabled');
 
      $("#edit-field-testlokation-und").change(function(){
 
-    $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+    $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
  });
 
 
-  $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php?id=" + $("#edit-field-testlokation-und").val() + "&rnd=" + Math.random(), function(data) {
+  $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test4.php?id=" + $("#edit-field-testlokation-und").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid3").html(data);
  });
 
@@ -529,7 +531,7 @@ $("#edit-submit4").attr('disabled','disabled');
 
        $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").keyup(function(){
 
-     $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+     $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
  });
 
@@ -540,7 +542,7 @@ $("#edit-submit4").attr('disabled','disabled');
      $("#edit-submit4").attr('disabled','disabled');
           $("#edit-submit4").css("background-color","#838383");
 
-    $.get("http://norwaydev.gobooking.bike/sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
+    $.get(Drupal.settings.basePath+"sites/all/themes/cua/panels/layouts/cua_oprettur/test.php?id=" + $("#edit-field-testlokation-und").val() + "&da=" + $("#edit-field-tur-dato-und-0-value-datepicker-popup-0").val() + "&rnd=" + Math.random(), function(data) {
  $("#syvtid").html(data);
  });
 

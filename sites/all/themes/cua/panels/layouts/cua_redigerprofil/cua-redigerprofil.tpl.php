@@ -1,10 +1,16 @@
 <?php
 global $user;
 $uid = $user->uid;
+$show_approved_locations = 0;
+
+if($user->roles[5] == 'frivillig'){
 $approved_lokations = db_select('field_data_field_godkendte_piloter', 'fgp')
   ->fields('fgp', array('entity_id', 'field_godkendte_piloter_uid'))
   ->condition('field_godkendte_piloter_uid', $uid)
   ->execute();
+
+$show_approved_locations = 1;
+}
 ?>
 <div class="rediger_profil">
                		<h2 id="usrrow0">REDIGER <strong>PROFIL</strong></h2>
@@ -52,7 +58,9 @@ $approved_lokations = db_select('field_data_field_godkendte_piloter', 'fgp')
                     	 <h3><strong>PROFILBILDE</strong></h3>
 
                     </div><!--close form_row2-->
-                    <?php if(isset($approved_lokations) && count($approved_lokations)>0) {?>
+                    <?php
+                    if($show_approved_locations){
+                    if(isset($approved_lokations) && count($approved_lokations)>0) {?>
                     <div class="approved_lokations_div">
                     <h3><strong>GODKJENTE BRUKERSTEDER</strong></h3>
                     <ul class="approved_lokations_ul">
@@ -72,9 +80,11 @@ $approved_lokations = db_select('field_data_field_godkendte_piloter', 'fgp')
 <?php
   }
 }
+
 ?>
                     </ul>
                     </div>
+                    <?php } ?>
                     <div class="form_row2" id="userretboks9">
 
                     </div><!--close form_row2-->

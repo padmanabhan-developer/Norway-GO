@@ -152,3 +152,84 @@ function cyklingudenalder_form_alter(&$form, &$form_state, $form_id){
 function cycklingudenalder_profile_form_submit($form, &$form_state){
  $form_state['redirect'] = 'lokationer';
 }
+
+
+function cyklingudenalder_views_query_alter(&$view, &$query) {
+  if ($view->name == 'calendar_fri_tur' && $view->current_display == 'page_2') {
+  $query->where['date']['conditions'][0]['field']="DATE_FORMAT(ADDTIME(FROM_UNIXTIME(field_data_field_tur_dato.field_tur_dato_value2), SEC_TO_TIME(7200)), '%Y-%m-%d') >= :node_date_argument AND DATE_FORMAT(ADDTIME(FROM_UNIXTIME(field_data_field_tur_dato.field_tur_dato_value), SEC_TO_TIME(7200)), '%Y-%m-%d') <= :node_date_argument1";
+  }
+
+  if ($view->name == 'calendar_tur' && $view->current_display == 'page_2') {
+  $query->where['date']['conditions'][0]['field']="DATE_FORMAT(ADDTIME(FROM_UNIXTIME(field_data_field_tur_dato.field_tur_dato_value2), SEC_TO_TIME(7200)), '%Y-%m-%d') >= :node_date_argument AND DATE_FORMAT(ADDTIME(FROM_UNIXTIME(field_data_field_tur_dato.field_tur_dato_value), SEC_TO_TIME(7200)), '%Y-%m-%d') <= :node_date_argument1";
+  }  
+  
+}
+
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function cyklingudenalder_theme_registry_alter(&$theme_registry) {
+  // Kill the next/previous forum topic navigation links.
+  /*
+   *foreach ($theme_registry['forum_topic_navigation']['preprocess functions'] as $key => $value) {
+   *  if ($value = 'template_preprocess_forum_topic_navigation') {
+   *    unset($theme_registry['forum_topic_navigation']['preprocess functions'][$key]);
+   *  }
+   *}
+   */
+
+  // to change the Date/week style displayed on top of the Calendar in GO
+  $theme_registry['date_nav_title']['function'] = 'cyklingudenalder_theme_date_nav_title';
+}
+
+function cyklingudenalder_theme_date_nav_title(&$params) {
+  $title  = '';
+  $granularity = $params['granularity'];
+  $view = $params['view'];
+  $date_info = $view->date_info;
+  $link = !empty($params['link']) ? $params['link'] : FALSE;
+  $format = !empty($params['format']) ? $params['format'] : NULL;
+  $format_with_year = variable_get('date_views_' . $granularity . '_format_with_year', 'l, F j, Y');
+  $format_without_year = variable_get('date_views_' . $granularity . '_format_without_year', 'l, F j');
+  switch ($granularity) {
+    case 'year':
+      $title = $date_info->year;
+      $date_arg = $date_info->year;
+      break;
+
+    case 'month':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? $format_with_year : $format_without_year);
+      $title = date_format_date($date_info->min_date, 'custom', $format);
+      $date_arg = $date_info->year . '-' . date_pad($date_info->month);
+      break;
+
+    case 'day':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? $format_with_year : $format_without_year);
+      $title = date_format_date($date_info->min_date, 'custom', $format);
+      $date_arg = $date_info->year;
+      $date_arg .= '-';
+      $date_arg .= date_pad($date_info->month);
+      $date_arg .= '-';
+      $date_arg .= date_pad($date_info->day);
+      break;
+
+    case 'week':
+      $format = !empty($format) ? $format : (empty($date_info->mini) ? $format_with_year : $format_without_year);
+      $title = t('Uke @date', array(
+        '@date' => date_format_date($date_info->min_date, 'custom', $format),
+      ));
+      $date_arg = $date_info->year . '-W' . date_pad($date_info->week);
+      break;
+  }
+  if (!empty($date_info->mini) || $link) {
+    // Month navigation titles are used as links in the mini view.
+    $attributes = array('title' => t('View full page month'));
+    $url = date_pager_url($view, $granularity, $date_arg, TRUE);
+    return l($title, $url, array('attributes' => $attributes));
+  }
+  else {
+    return $title;
+  }
+}
+

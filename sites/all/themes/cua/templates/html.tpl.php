@@ -68,7 +68,7 @@
      <div class="container">
           <div class="footer_readmore">
                <h2>LES MER</h2>
-               <a style="font-weight:bold" href="http://www.cyklingudenalder.dk" target="_blank">www.cyklingudenalder.dk</a>
+               <a style="font-weight:bold" href="http://www.syklingutenalder.com" target="_blank">www.syklingutenalder.com</a>
           </div>
           <div class="footer_social">
                <a href="https://twitter.com/search?q=cyklingudenalder" target="_blank" class="icon-button twitter">
@@ -81,9 +81,11 @@
                </a>
           </div>
           <div class="footer_support">
-               <p>TRANGRAVSVEJ 8</p>
-               <p>1436 KØBENHAVN K</p>
-               <p><a href="mailto:support@cyklingudenalder.dk">support@cyklingudenalder.dk</a></p>
+               <p>HAUGSÅSVEGEN 30</p>
+               <p>3712 SKIEN</p>
+               <p><a href="mailto:syklingutenalder@gmail.com">syklingutenalder@gmail.com</a></p>
+               <p>+47 917 24 122</p>
+
           </div>
           <div style="clear:both"></div>
      </div>
